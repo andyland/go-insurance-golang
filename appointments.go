@@ -30,10 +30,6 @@ func createAppointment(c *gin.Context) {
 		c.String(400, "Invalid time of day")
 		return
 	}
-	if username == getUserAppointment(username).username {
-		c.String(409, "User already has an appointment")
-		return
-	}
 	createUserAppointment(Appointment{username, parsedDate, timeOfDay})
 	c.JSON(201, gin.H{
 		"username":    username,
@@ -62,7 +58,7 @@ func getAppointment(c *gin.Context) {
 	if username == appointment.username {
 		c.JSON(200, gin.H{
 			"username":    appointment.username,
-			"date":        appointment.date,
+			"date":        appointment.date.Format("2006-01-02"),
 			"time_of_day": appointment.timeOfDay,
 		})
 		return

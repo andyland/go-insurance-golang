@@ -1,10 +1,10 @@
 package main
 
 import (
-	"log"
-	"os"
 	"github.com/gin-gonic/gin"
 	_ "github.com/lib/pq"
+	"log"
+	"os"
 )
 
 func main() {

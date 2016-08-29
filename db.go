@@ -44,6 +44,7 @@ func getUserAppointment(username string) Appointment {
 }
 
 func createUserAppointment(appointment Appointment) {
+	deleteUserAppointment(appointment.username)
 	_, err := db.Query("INSERT INTO appointments VALUES ($1, $2, $3)", appointment.username, appointment.date, appointment.timeOfDay)
 	if err != nil {
 		log.Panicf("Database error: %q", err)
