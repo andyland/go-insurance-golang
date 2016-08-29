@@ -15,14 +15,13 @@ export GO_INSURANCE_TEST_PORT="5000"
 
 ## Endpoints
 
-###/Appointments
+###/users/:username/appointments
 
 #####POST
 
 Creates an appointment
 
 Requires:
-* username
 * date (yyyy-mm-dd format)
 * time\_of_day
 
@@ -30,10 +29,7 @@ Requires:
 
 Returns an appointment for the user, or 404 if there isn't one
 
-Requires:
-* username
 
 #####DELETE
 
 Deletes the appointment for that user
-* username
