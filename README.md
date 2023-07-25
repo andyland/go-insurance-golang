@@ -1,6 +1,6 @@
-#Usage
+# Usage
 
-##Setup
+## Setup
 
 1. Create a postgres database on your machine 
 ```
@@ -15,9 +15,9 @@ export GO_INSURANCE_TEST_PORT="5000"
 
 ## Endpoints
 
-###/users/:username/appointments
+### /users/:username/appointments
 
-#####POST
+##### POST
 
 Creates an appointment
 
@@ -25,11 +25,11 @@ Requires:
 * date (yyyy-mm-dd format)
 * time\_of_day
 
-#####GET
+##### GET
 
 Returns an appointment for the user, or 404 if there isn't one
 
 
-#####DELETE
+##### DELETE
 
 Deletes the appointment for that user
